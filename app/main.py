@@ -12,7 +12,7 @@ def main():
     conn, addr = server_socket.accept() # wait for client
     with conn:
         data = conn.recv(1024)
-        conn.sendall(b"PONG")
+        conn.sendall(b"+PONG\r\n")
 
 
 if __name__ == "__main__":
