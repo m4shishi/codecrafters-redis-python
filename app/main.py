@@ -13,7 +13,7 @@ def main():
     with conn:
         while True:
             data = conn.recv(1024)
-            conn.sendall(bytes(f"+{data}\r\n"))
+            conn.sendall(bytes(f"+{data.decode()}\r\n"))
 
 
 if __name__ == "__main__":
